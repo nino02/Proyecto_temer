@@ -1,0 +1,428 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+html {
+    overflow-y: scroll;
+}   /*Para que esté centrada la barra de navegación*/
+:root {
+    --bg-color: #ffffff;
+    --text-color: #221314;
+    --second-color: #6e54fa;
+    --main-color: linear-gradient(135deg, #6e54fa, #9d8dfc);
+    --primary-light: #74a84a;
+    --primary-dark: #2c541d;
+    --big-font: 4rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+    --shadow-light: rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px;
+    
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18%;
+    
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    
+}
+
+header.sticky .logo {
+    font-size: 28px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4px;
+    
+}
+
+.navbar a:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: var(--bg-color);
+}
+
+section {
+    padding: 80px 18%;
+}
+
+.inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/main3.png); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: center;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-start; /* Mueve el contenido hacia arriba */
+    padding-top: 100px; /* Ajusta la separación desde arriba */
+}
+
+
+.inicio-text {
+    margin-top: -0px; /* Ajusta la altura específica */
+}
+
+
+
+.inicio-text h1 {
+    font-size: var(--big-font);
+    line-height: 0.8;
+    color: var(--primary-dark);
+    font-family: 'Paytone One', sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    
+}
+
+.inicio-text p {
+    color: var(--primary-dark);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 38px;
+    margin-bottom: 50px;
+    animation: slideUp 1.5s ease;
+}
+
+.inicio-btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 30px;
+    background: var(--primary-light);
+    color: var(--bg-color);
+    border-radius: 4px;
+    transition: var(--transition);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.inicio-btn:hover {
+    transform: scale(1.1);
+    background: var(--primary-light);
+    color: #fff;
+}
+
+header.sticky {
+    background-color: var(--bg-color);
+    padding: 10px 18%;
+    box-shadow: var(--shadow-light);
+}
+
+.container-box {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    margin: 0.5%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-light);
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.container-box:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px;
+}
+
+.container-img {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(0.9);
+    transition: var(--transition);
+}
+
+.container-img img:hover {
+    filter: brightness(1.1);
+}
+
+.container-box h4 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--second-color);
+    margin: 10px 0;
+}
+
+.container h2{
+    margin-bottom: 30px;
+}
+
+.container-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.row-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.heading h1{
+    font-size: 100px;
+    font-weight: 500;
+    opacity: 0.1;
+    font-family: serif;
+    position: absolute;
+    top: 0px;
+}
+.heading h2{
+    margin: 10px 0;
+    font-size: 45px;
+    font-family: serif;
+    font-weight: 400;
+}
+.quienes{
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+.left,.right{
+    width: 50%;
+    padding: 40px;
+}
+.quienes .heading h1{
+    top: 20px;
+}
+
+.right img {
+    margin-top: 30px;
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción */ /* Tamaño máximo opcional */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+     /* Opcional, para ajustar cómo se recorta la imagen */
+}
+
+.fondonos {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/contact-banner.png); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: center;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-start; /* Mueve el contenido hacia arriba */
+    padding-top: 100px; /* Ajusta la separación desde arriba */
+}
+
+.galeria {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+}
+
+.galeria .heading h2 {
+    margin-top: 20px;
+}
+
+.galeria .heading p {
+    margin-top: 50px;
+}
+
+.owl-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Ajustar al tamaño deseado del carrusel */
+}
+
+.items {
+    flex: 0 0 20%; /* Incrementamos el tamaño de cada foto (ahora muestra 5 fotos visibles) */
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+    padding: 15px; /* Espacio entre las imágenes */
+    position: relative; /* Necesario para que el overlay se posicione correctamente */
+}
+
+.img {
+    width: 100%; /* Incrementamos el tamaño dentro del contenedor */
+    aspect-ratio: 1 / 1; /* Mantiene el contenedor cuadrado */
+    overflow: hidden; /* Oculta cualquier parte que se salga del contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Centra las imágenes */
+    position: relative; /* Necesario para que el overlay se posicione sobre la imagen */
+}
+
+.img img {
+    width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+    height: 100%; /* Llena el espacio del contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el espacio */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Efecto hover en la imagen */
+.img:hover .overlay {
+    opacity: 1; /* Muestra el fondo y texto al hacer hover */
+}
+
+/* Estilos para el overlay con fondo verde semitransparente */
+.overlay {
+    position: absolute; /* Posiciona el overlay sobre la imagen */
+    bottom: 0; /* Alinea el overlay en la parte inferior de la imagen */
+    left: 0;
+    width: 100%; /* Asegura que el fondo cubra toda la imagen */
+    background-color: rgba(0, 128, 0, 0.7); /* Fondo verde semitransparente */
+    color: white; /* Texto en blanco */
+    text-align: center;
+    padding: 10px 0; /* Espacio alrededor del texto */
+    font-size: 1.2rem; /* Tamaño del texto */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease; /* Efecto de transición */
+}
+
+/* Ajustes del título */
+.overlay h3 {
+    margin: 0; /* Elimina márgenes alrededor del título */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries para responsividad */
+@media screen and (max-width: 1200px) {
+    header {
+        padding: 30px 10%;
+    }
+    .navbar a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+    .inicio-text h1 {
+        font-size: 4rem;
+    }
+    .container-box {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        padding: 30px 5%;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .inicio-text h1 {
+        font-size: 3.5rem;
+    }
+    .inicio-text p {
+        font-size: 18px;
+    }
+    .container-box {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .inicio-text h1 {
+        font-size: 3rem;
+    }
+    .inicio-text p {
+        font-size: 16px;
+    }
+    .container-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 20px 5%;
+    }
+    .logo {
+        font-size: 24px;
+    }
+    .navbar a {
+        padding: 10px 15px;
+    }
+    .inicio-text h1 {
+        font-size: 2.5rem;
+    }
+    .inicio-text p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .container-box {
+        width: 100%;
+    }
+}  

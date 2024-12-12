@@ -22,15 +22,17 @@
             fetch('/api/data')
                 .then(response => response.json())
                 .then(data => {
-                    // Mostrar los datos obtenidos
-                    if (data.hotels) {
-                        const hotels = data.hotels.map(hotel => `
+                    // Mostrar la información del primer hotel
+                    if (data.length > 0) {
+                        const hotel = data[0]; // Tomar el primer hotel de la lista
+                        resultDiv.innerHTML = `
                             <p><strong>Nombre:</strong> ${hotel.name}</p>
-                            <p><strong>Precio:</strong> ${hotel.price} EUR</p>
-                        `).join('');
-                        resultDiv.innerHTML = hotels;
+                            <p><strong>Teléfono:</strong> ${hotel.telephone}</p>
+                            <p><strong>Rating:</strong> ${hotel.rating}</p>
+                            <p><strong>Precio:</strong> ${hotel.price}</p>
+                        `;
                     } else {
-                        resultDiv.innerHTML = data;
+                        resultDiv.innerHTML = "No se encontraron hoteles.";
                     }
                 })
                 .catch(error => {
