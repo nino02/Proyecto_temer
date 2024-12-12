@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta API MakCorps</title>
+</head>
+<body>
+    <h1>Resultados de Hoteles</h1>
+    <button id="fetchData">Consultar Hoteles</button>
+    <div id="result"></div>
+
+    <script>
+        const button = document.getElementById('fetchData');
+        const resultDiv = document.getElementById('result');
+
+        // Función para realizar la consulta a la API
+        button.addEventListener('click', () => {
+            resultDiv.innerHTML = "Cargando datos..."; // Mensaje temporal
+
+            // Hacer la consulta al backend
+            fetch('/api/data')
+                .then(response => response.json())
+                .then(data => {
+                    // Mostrar los datos obtenidos
+                    if (data.hotels) {
+                        const hotels = data.hotels.map(hotel => `
+                            <p><strong>Nombre:</strong> ${hotel.name}</p>
+                            <p><strong>Precio:</strong> ${hotel.price} EUR</p>
+                        `).join('');
+                        resultDiv.innerHTML = hotels;
+                    } else {
+                        resultDiv.innerHTML = data;
+                    }
+                })
+                .catch(error => {
+                    resultDiv.innerHTML = "Error al cargar los datos.";
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+</html>
