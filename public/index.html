@@ -1,45 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta API MakCorps</title>
-</head>
+	<title>Hotelify - Inicio</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head> 
 <body>
-    <h1>Resultados de Hoteles</h1>
-    <button id="fetchData">Consultar Hoteles</button>
-    <div id="result"></div>
+  <div class="zona_main">
+    <nav>
+    <div class="texto"><h1>Hotelify</h1></div>
+      <ul class="navbar">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./secciones/Busqueda.html">Búsqueda</a></li>
+        <li><a href="./secciones/contacto.html">Contacto</a></li>
+        <li><a href="./secciones/Nosotros.html">Sobre Nosotros</a></li>
+      </ul>
+     </nav>
 
-    <script>
-        const button = document.getElementById('fetchData');
-        const resultDiv = document.getElementById('result');
+    <div class="content">
+      <h3>Descansa bien, cuida el planeta</h3>
+      <h1>HOTELIFY</h1>
+      <p>Bienvenido a tu próximo destino de ensueño. Relájate, disfruta y haz de tu estancia una experiencia inolvidable. <br> Descubre la comodidad, el lujo y el servicio de calidad que mereces. Reserva ahora y empieza a planificar tu escapada. <br> Hotelify elige para tí la mejor opción hotelera por toda España de manera totalmente gratuita.</p>
+      <a href="./secciones/Nosotros.html" class="inicio-btn">Explora</a>
+      
+    </div>
+   
+    <!--<div class="main-img">
+      <img src="img/arbol.png">-->
+    </div>
+  </div>
+  
 
-        // Función para realizar la consulta a la API
-        button.addEventListener('click', () => {
-            resultDiv.innerHTML = "Cargando datos..."; // Mensaje temporal
-
-            // Hacer la consulta al backend
-            fetch('/api/data')
-                .then(response => response.json())
-                .then(data => {
-                    // Mostrar la información del primer hotel
-                    if (data.length > 0) {
-                        const hotel = data[0]; // Tomar el primer hotel de la lista
-                        resultDiv.innerHTML = `
-                            <p><strong>Nombre:</strong> ${hotel.name}</p>
-                            <p><strong>Teléfono:</strong> ${hotel.telephone}</p>
-                            <p><strong>Rating:</strong> ${hotel.rating}</p>
-                            <p><strong>Precio:</strong> ${hotel.price}</p>
-                        `;
-                    } else {
-                        resultDiv.innerHTML = "No se encontraron hoteles.";
-                    }
-                })
-                .catch(error => {
-                    resultDiv.innerHTML = "Error al cargar los datos.";
-                    console.error('Error:', error);
-                });
-        });
-    </script>
+              <!---- ZONA FOOTER -->
+    <footer class="contenedor_principal">
+        <ul class="footerlinks">
+            <li><a href="./main.html">Inicio</a></li>
+            <li><a href="./secciones/Busqueda.html">Búsqueda</a></li>
+            <li><a href="./secciones/contacto.html">Contacto</a></li>
+            <li><a href="./secciones/Nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+        <h1 class="texto">Hotelify</h1>
+        <p>©2024 Hotelify. Todos los derechos reservados</p>
+      </footer>
+      <script type="text/javascript" src="./js/inicio.js"></script>
 </body>
 </html>
