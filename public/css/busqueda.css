@@ -93,7 +93,7 @@
 }
 
 /* Listado de hoteles */
-.hotel-list {
+#hotel-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -140,6 +140,40 @@
 .hotel-rating {
     font-size: 14px;
     color: #FF851B;
+}
+
+
+.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: white;
+    border: 0px solid #ccc;
+    width: 40%; /* Para alinear con el campo */
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin-top: 75px;
+}
+
+.suggestions-list.active {
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestions-list li:last-child {
+    border-bottom: none;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
 }
 
 /* Footer */

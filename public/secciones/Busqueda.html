@@ -14,7 +14,8 @@
     <div class="search-row">
         <div class="search-field full-width">
             <label for="destination">Destino</label>
-            <input type="text" id="destination" placeholder="Introduce tu destino">
+            <input type="text" id="destination" placeholder="Introduce tu destino" autocomplete="off">
+            <ul id="suggestions" class="suggestions-list"></ul>
         </div>
     </div>
 
@@ -42,7 +43,7 @@
 </div>
 
 
-<main class="hotel-list">
+<main id="hotel-list">
     <div class="hotel-card">
         <img src="../img/hoteles/hotel_base.jpg" alt="Imagen del Hotel 1" class="hotel-image">
         <div class="hotel-info">

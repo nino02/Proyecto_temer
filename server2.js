@@ -39,8 +39,9 @@ app.post('/api/data', async (req, res) => {
 
         // Filtrar los datos obtenidos de la API
         const filteredHotels = filterHotels(hotels);
-        console.log(adults);
+        
         res.json(filteredHotels);
+
     } catch (error) {
         console.error(`Error: ${error.message}`);
         
