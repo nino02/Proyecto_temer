@@ -7,84 +7,41 @@
     <link rel="stylesheet" href="../css/busqueda.css">
 </head>
 <body>
-<header>
-    <h1 id="titulo">Búsqueda</h1>
-    <!-- Puedes añadir una imagen aquí si lo deseas -->
-</header>
-
-<section class="search-section">
-    <form class="search-form" action="#" method="GET">
-        <div class="form-field">
-            <label for="province">Provincia:</label>
-            <input type="text" id="province" name="province" placeholder="Escribe una provincia" autocomplete="off">
-            <ul id="province-list" class="dropdown-list"></ul>
-        </div>
-        <div class="form-field">
-            <label for="people">Número de personas:</label>
-            <input type="number" id="people" name="people" min="1" placeholder="Ej: 2">
-        </div>
-        <div class="form-field">
-            <label for="checkin">Check-in:</label>
-            <input type="date" id="checkin" name="checkin">
-        </div>
-        <div class="form-field">
-            <label for="checkout">Check-out:</label>
-            <input type="date" id="checkout" name="checkout">
-        </div>
-        <div class="form-buttons">
-            <button type="submit">Buscar</button>
-            <button type="reset">Limpiar</button>
-        </div>
-    </form>
-</section>
-
-<script>
-    // Provincias disponibles
-    const provinces = [
-        "A Coruña", "Álava", "Albacete", "Alicante", "Almería", "Asturias", 
-        "Ávila", "Badajoz", "Baleares", "Barcelona", "Burgos", "Cáceres", 
-        "Cádiz", "Cantabria", "Castellón", "Ceuta", "Ciudad Real", "Córdoba", 
-        "Cuenca", "Girona", "Granada", "Guadalajara", "Guipúzcoa", "Huelva", 
-        "Huesca", "Jaén", "La Rioja", "Las Palmas", "León", "Lleida", "Lugo", 
-        "Madrid", "Málaga", "Melilla", "Murcia", "Navarra", "Ourense", 
-        "Palencia", "Pontevedra", "Salamanca", "Santa Cruz de Tenerife", 
-        "Segovia", "Sevilla", "Soria", "Tarragona", "Teruel", "Toledo", 
-        "Valencia", "Valladolid", "Vizcaya", "Zamora", "Zaragoza"
-    ];
-
-    const input = document.getElementById('province');
-    const dropdown = document.getElementById('province-list');
-
-    // Filtra las provincias según lo que el usuario escribe
-    input.addEventListener('input', () => {
-        const query = input.value.toLowerCase();
-        dropdown.innerHTML = ''; // Limpia la lista
-        if (query) {
-            const filteredProvinces = provinces.filter(province =>
-                province.toLowerCase().includes(query)
-            );
-            filteredProvinces.forEach(province => {
-                const li = document.createElement('li');
-                li.textContent = province;
-                li.classList.add('dropdown-item');
-                li.addEventListener('click', () => {
-                    input.value = province; // Selecciona la provincia
-                    dropdown.innerHTML = ''; // Limpia el dropdown
-                });
-                dropdown.appendChild(li);
-            });
-        }
-    });
-
-    // Cierra el dropdown al hacer clic fuera
-    document.addEventListener('click', (e) => {
-        if (!dropdown.contains(e.target) && e.target !== input) {
-            dropdown.innerHTML = '';
-        }
-    });
-</script>
 
 <!-- Lista de hoteles -->
+<div class="search-container">
+    <!-- Primera fila: Campo de destino -->
+    <div class="search-row">
+        <div class="search-field full-width">
+            <label for="destination">Destino</label>
+            <input type="text" id="destination" placeholder="Introduce tu destino">
+        </div>
+    </div>
+
+    <!-- Segunda fila: Check-in, Check-out, Adultos y Buscar -->
+    <div class="search-row">
+        <div class="search-field">
+            <label for="checkin">Check-in</label>
+            <input type="date" id="checkin">
+        </div>
+        <div class="search-field">
+            <label for="checkout">Check-out</label>
+            <input type="date" id="checkout">
+        </div>
+        <div class="search-field">
+            <label for="adults">Adultos</label>
+            <select id="adults">
+                <option value="1">1 adulto</option>
+                <option value="2">2 adultos</option>
+                <option value="3">3 adultos</option>
+                <option value="4">4 adultos</option>
+            </select>
+        </div>
+        <button class="search-button">Buscar</button>
+    </div>
+</div>
+
+
 <main class="hotel-list">
     <div class="hotel-card">
         <img src="../img/hoteles/hotel_base.jpg" alt="Imagen del Hotel 1" class="hotel-image">
@@ -96,8 +53,9 @@
     </div>
 
     <div class="hotel-card">
-        <img src="hotel2.jpg" alt="Imagen del Hotel 2" class="hotel-image">
+        <img src="../img/hoteles/hotel5.jpg" alt="Imagen del Hotel 2" class="hotel-image">
         <div class="hotel-info">
+
             <h2 class="hotel-name">Hotel Relax</h2>
             <p class="hotel-price">Precio: 90€ por noche</p>
             <p class="hotel-rating">Valoración: ★★★☆☆</p>
@@ -106,14 +64,6 @@
     <!-- Añade más hoteles -->
 </main>
     <footer class="contenedor_principal">
-        <ul class="footerlinks">
-            <li><a href="./inicio.html">Inicio</a></li>              <!---- cambiar todas las rutas -->
-            <li><a href="">Sobre nosotros</a></li>
-            <li><a href="">Registro</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-        </ul>
-        <h1 class="texto">Hotelify</h1>
-        <p>©2024 Hotelify. Todos los derechos reservados</p>
-      </footer>
+    </footer>
 </body>
 </html>
