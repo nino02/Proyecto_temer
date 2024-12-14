@@ -93,24 +93,6 @@ nav ul a:hover{
     background-color: var(--primary-dark);
 }
 
-/* Zona footer */
-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 0;
-    align-items: center;
-    margin-right: 100px;
-    margin-left: 100px;
-  }
-  footer ul {
-    display: flex;
-    list-style: none;
-    gap: 32px;
-  }
-  footer .texto {
-    color: var(--primary-dark);
-  }
-
   /* Contact page */
 #zona_contacto {
     min-height: 600px;

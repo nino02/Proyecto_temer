@@ -1,0 +1,25 @@
+    /*Inicio Footer*/
+
+    .contenedor_principal {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 8px;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0;
+        align-items: center;
+    }
+    
+    footer ul {
+        display: flex;
+        list-style: none;
+        gap: 32px;
+    }
+    
+    footer .texto {
+        color: var(--primary-dark);
+    }
+        /*Fin Footer*/

@@ -1,0 +1,332 @@
+
+
+
+/*Fin del menú*/
+
+
+/*Inicio zona introducción*/
+.introduccion {
+    width: 100%;
+    height: auto;
+    background: url(../img/contact-banner.png);
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: repeat(1, 1fr);
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.introduccion .left,
+.introduccion .right {
+    width: 50%;
+    padding: 40px;
+}
+.introduccion .left .heading h1 {
+    margin-top: -50px;
+    font-size: var(--big-font);
+    font-weight: 500;
+    opacity: 0.1;
+    font-family: serif;
+    position: absolute;
+}
+.introduccion .left .heading h2 {
+    margin-top: 80px;
+    font-size: var(--h2-font);
+    font-family: serif;
+    font-weight: 400;
+}
+.introduccion .left .heading p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.introduccion .right img {
+    margin-top: 30px;
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+}
+
+    
+    /*Fin zona introducción*/
+     
+    /*Zona alojamientos*/
+
+.alojamientos{
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+.alojamientos h2{
+    margin-bottom: 30px;
+    font-size: var(--h2-font);
+}
+.alojamientos .row-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.alojamientos-box {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    margin: 0.5%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-light);
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    width: 100%; 
+}
+
+.alojamientos-box:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-light)
+}
+.alojamientos-box h4{
+    font-size: var(--h4-font);
+    font-weight: bold;
+    color: var(--second-color);
+    margin: 10px 0;
+}
+.alojamientos-box p{
+    font-size: var(--p-font);
+    color: var(--grey)
+}
+.alojamientos-img{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.alojamientos-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(0.9);
+    transition: var(--transition);
+}
+.alojamientos-img img:hover {
+    filter: brightness(1.1);
+}
+
+    /*Fin zona alojamientos*/
+
+    /*Inicio zona galería*/
+
+.galeria {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+}
+.heading h1 {
+    font-size: var(--big-font);
+    font-weight: 500;
+    opacity: 0.1;
+    font-family: serif;
+    position: absolute;
+    margin-top: -50px;
+}
+.heading h2 {
+    font-size: var(--h2-font);
+    font-family: serif;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.heading p {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+.items {
+    flex: 0 0 20%;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+    padding: 0px;
+    position: relative;
+}
+.items:hover .overlay {
+    opacity: 1;
+}
+.img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--second-green);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.overlay h3 {
+    margin: 0;
+}
+
+    /*Fin zona galería*/
+
+    /*Inicio zona servicios*/
+    .servicios {
+        position: relative;
+        padding: 80px;
+    }
+    
+    .contenedor h1 {
+        font-size: 100px;
+        font-weight: 500;
+        opacity: 0.1;
+        font-family: serif;
+        position: absolute;
+        top: 0px;
+        margin-top: 40px;
+    }
+    
+    .contenedor h2 {
+        margin: 10px 0;
+        font-size: var(--h2-font);
+        font-family: serif;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+    
+    .contenido {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        position: relative;
+        padding: 20px;
+    }
+    
+    .contenido .left {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Por defecto: dos columnas */
+        gap: 20px;
+        width: 50%;
+        margin: 5px;
+    }
+    
+    .contenido .left .box {
+        
+        width: 100%; /* Todas las cajas tienen el mismo tamaño */
+        height: auto; /* Altura fija */
+        border: 1px solid var(--text-color);
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        transition: 0.3s;
+        position: relative;
+    }
+    
+    .contenido .box:hover {
+        background: var(--first-green);
+        color: var(--bg-color);
+        cursor: pointer;
+    }
+    
+    .contenido .box:hover h3 {
+        color: var(--bg-color);
+    }
+    
+    .imagen_servicios {
+        width: 100%;
+        height: 120px; /* Todas las imágenes tendrán esta altura */
+        object-fit: contain; /* Ajuste completo dentro del área */
+        border-radius: 8px;
+    }
+    
+    .servicios h3 {
+        font-size: 20px;
+        font-weight: 400;
+        transition: 0.3s;
+    }
+    .contenido .right {
+        width: 50%; /* Se mantiene en el lado derecho ocupando el 50% del contenedor */
+        display: flex;
+        align-items: center; /* Centra verticalmente la imagen */
+        justify-content: flex-end; /* Mantiene la imagen alineada a la derecha */
+        overflow: hidden; /* Asegura que no haya desbordamiento */
+    }
+    
+    .imagen_der_ser {
+        width: 100%; /* La imagen ocupará todo el ancho disponible del contenedor */
+        height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+        object-fit: contain; /* Asegura que la imagen completa sea visible sin recortes */
+        border-radius: 10px; /* Opcional: para bordes redondeados */
+    }
+    /*Fin zona servicios*/
+
+
+    /*Inicio Consumidor */
+.consumidor {
+    background-image: url(../img/interior.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    color: var(--bg-color);
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */;
+}
+
+.consumidor .comentario {
+    padding: 5%;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+}
+
+.consumidor .consumidor h3 {
+    margin-top: 20px;
+    color: var(--first-green);
+}
+
+.consumidor .consumidor p {
+    line-height: 30px;
+    font-size: var(--p-font);
+}
+
+    /*Fin Consumidor */
+
+
