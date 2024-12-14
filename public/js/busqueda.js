@@ -1,51 +1,15 @@
+let hotelsData = [];
+
 document.addEventListener("DOMContentLoaded", () => {
     const searchButton = document.querySelector(".search-button");
     const destinationInput = document.getElementById("destination");
     const checkinInput = document.getElementById("checkin");
     const checkoutInput = document.getElementById("checkout");
     const adultsInput = document.getElementById("adults");
-
-    searchButton.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        const cityid = destinationInput.value.trim(); // ID o nombre de la ciudad
-        const checkin = checkinInput.value;
-        const checkout = checkoutInput.value;
-        const adults = adultsInput.value;
-
-        // Validar los campos antes de enviar
-        if (!cityid || !checkin || !checkout || !adults) {
-            alert("Por favor, rellena todos los campos.");
-            return;
-        }
-
-        // Realizar solicitud POST al servidor
-        fetch('/api/data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ cityid, checkin, checkout, adults }),
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Error en la solicitud: ${response.status}`);
-                }
-                console.log(response);
-                return response.json();
-            })
-            .then(data => {
-                console.log("Datos obtenidos:", data);
-                renderHotelCards(data);
-            })
-            .catch(error => {
-                console.error("Error al realizar el fetch:", error);
-                alert("Hubo un problema al obtener los datos. Inténtalo de nuevo.");
-            });
-    });
-
-    const suggestionsList = document.getElementById("suggestions");
-
+    const hotelList = document.getElementById("hotel-list");
+    document.getElementById("filter-price").addEventListener("click", sortByPrice);
+    document.getElementById("filter-alphabetical").addEventListener("click", sortByName);
+    document.getElementById("filter-rating").addEventListener("click", sortByRating);
     // Lista de destinos predefinidos
     const destinations = [
         "Álava/Araba",
@@ -102,7 +66,53 @@ document.addEventListener("DOMContentLoaded", () => {
         "Melilla"
     ];
     
+    
+    searchButton.addEventListener("click", (event) => {
+        event.preventDefault();
 
+        const cityid = destinationInput.value.trim(); // ID o nombre de la ciudad
+        const checkin = checkinInput.value;
+        const checkout = checkoutInput.value;
+        const adults = adultsInput.value;
+
+        // Validar los campos antes de enviar
+        if (!cityid || !checkin || !checkout || !adults) {
+            alert("Por favor, rellena todos los campos.");
+            return; 
+        }
+        else if (validateDates()) return;
+        // Validar fechas
+        
+
+        
+
+        // Realizar solicitud POST al servidor
+        fetch('/api/data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ cityid, checkin, checkout, adults }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Error en la solicitud: ${response.status}`);
+                }
+                console.log(response);
+                return response.json();
+            })
+            .then(data => {
+                console.log("Datos obtenidos:", data);
+                hotelsData = data;
+                renderHotelCards(data);
+            })
+            .catch(error => {
+                console.error("Error al realizar el fetch:", error);
+                alert("Hubo un problema al obtener los datos. Inténtalo de nuevo.");
+            });
+    });
+
+    const suggestionsList = document.getElementById("suggestions");
     // Función para mostrar sugerencias
     function showSuggestions(query) {
         suggestionsList.innerHTML = ""; // Limpiar sugerencias previas
@@ -129,10 +139,10 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             suggestionsList.appendChild(li);
-        });
-        //if (length(filtered) == 0 || length(filtered) == 1) suggestionsList.classList.remove("active");
-    }
 
+        });
+    }
+     
     // Escuchar el evento "input" en el campo de destino
     destinationInput.addEventListener("input", () => {
         const query = destinationInput.value.trim();
@@ -145,33 +155,84 @@ document.addEventListener("DOMContentLoaded", () => {
             suggestionsList.innerHTML = "";
         }
     });
-    
-});
 
-// Función para crear tarjetas de hoteles
-function renderHotelCards(hotels) {
-    const hotelList = document.getElementById("hotel-list");
-    hotelList.innerHTML = ""; // Limpiar contenido previo
+    // Delegar el evento al contenedor
+    hotelList.addEventListener("click", (event) => {
+        // Verificar si el clic viene de un botón "Reservar"
+        if (event.target.classList.contains("reserve-button")) {
+            const hotelName = event.target.parentElement.querySelector(".hotel-name").textContent;
+            alert(`Has reservado el hotel: ${hotelName}`);
+        }
+    });
 
-    if (hotels.length === 0) {
-        hotelList.innerHTML = "<p>No se encontraron hoteles para los criterios seleccionados.</p>";
-        return;
+    function validateDates() {
+        const checkinDate = new Date(checkinInput.value);
+        const checkoutDate = new Date(checkoutInput.value);
+        const today = new Date();
+
+        // Eliminar horas, minutos y segundos de la fecha actual
+        today.setHours(0, 0, 0, 0);
+
+        if (checkinDate < today) {
+            alert("La fecha de Check-in debe ser igual o posterior a la fecha actual.");
+            return true;
+        }
+
+        if (checkoutDate <= checkinDate) {
+            alert("La fecha de Check-out debe ser posterior a la fecha de Check-in.");
+            return true;
+        }
+
+        return false; // True si ha detectado un error o False si no ha detectado una incoherencia
     }
 
-    hotels.forEach(hotel => {
-        const card = document.createElement("div");
-        card.classList.add("hotel-card");
+    // Filtrar por precio (ascendente)
+    function sortByPrice() {
+        const sorted = [...hotelsData].sort((a, b) => a.price - b.price);
+        renderHotelCards(sorted);
+    }
 
-        card.innerHTML = `
-            <img src="https://via.placeholder.com/300x200" alt="Imagen de ${hotel.name}" class="hotel-image">
-            <div class="hotel-info">
-                <h2 class="hotel-name">${hotel.name}</h2>
-                <p class="hotel-price">Precio: ${hotel.price || "No disponible"}</p>
-                <p class="hotel-rating">Valoración: ${hotel.rating || "No disponible"} ★</p>
-                <p class="hotel-telephone">Teléfono: ${hotel.telephone || "No disponible"}</p>
-            </div>
-        `;
+    // Filtrar por orden alfabético (ascendente)
+    function sortByName() {
+        const sorted = [...hotelsData].sort((a, b) => a.name.localeCompare(b.name));
+        renderHotelCards(sorted);
+    }
 
-        hotelList.appendChild(card);
-    });
-}
+    // Filtrar por rating (descendente)
+    function sortByRating() {
+        const sorted = [...hotelsData].sort((a, b) => b.rating - a.rating);
+        renderHotelCards(sorted);
+    }
+
+    // Función para crear tarjetas de hoteles
+    function renderHotelCards(hotels) {
+        hotelList.innerHTML = ""; // Limpiar contenido previo
+
+        if (hotels.length === 0) {
+            hotelList.innerHTML = "<p>No se encontraron hoteles para los criterios seleccionados.</p>";
+            return;
+        }
+
+        hotels.forEach(hotel => {
+            const card = document.createElement("div");
+            card.classList.add("hotel-card");
+            srcImage = "../img/hoteles/hotel"+Math.floor(hotel.rating)+".jpg";
+            card.innerHTML = `
+                <img src="${srcImage}" alt="Imagen de ${hotel.name}" class="hotel-image width="150" height="100"">
+                <div class="hotel-info">
+                    <h2 class="hotel-name">${hotel.name}</h2>
+                    <p class="hotel-price">Precio: ${hotel.price || "No disponible"}</p>
+                    <p class="hotel-rating">Valoración: ${hotel.rating || "No disponible"} ★</p>
+                    <p class="hotel-telephone">Teléfono: ${hotel.telephone || "No disponible"}</p>
+                </div>
+                <button class="reserve-button">Reservar</button>
+            `;
+
+            hotelList.appendChild(card);
+
+        });
+    }
+});
+
+
+

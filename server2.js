@@ -70,7 +70,7 @@ const mockData = [
       telephone: '+34 965 20 50 00',
       name: 'Melia Alicante',
       hotelId: 228599,
-      reviews: { rating: 4, count: 7395 },
+      reviews: { rating: 2, count: 7395 },
       vendor1: 'Melia.com',
       price1: '€288'
     },
