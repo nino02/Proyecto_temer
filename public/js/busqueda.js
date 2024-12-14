@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Ceuta",
         "Melilla"
     ];
-    
+    const loadingContainer = document.getElementById("loading-container");
     
     searchButton.addEventListener("click", (event) => {
         event.preventDefault();
@@ -85,7 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
         
-        
+        loadingContainer.style.display = "block";
+
         // Realizar solicitud POST al servidor
         fetch('/api/data', {
             method: 'POST',
@@ -106,11 +107,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.log("Datos obtenidos:", data);
                 hotelsData = data;
                 renderHotelCards(data);
+                loadingContainer.style.display = "none";
             })
             .catch(error => {
                 console.error("Error al realizar el fetch:", error);
                 alert("Hubo un problema al obtener los datos. Inténtalo de nuevo.");
-            });
+            })
+            
+            ;
     });
 
     const suggestionsList = document.getElementById("suggestions");
