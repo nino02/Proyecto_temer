@@ -1,0 +1,187 @@
+[
+    {
+        "lookbackServlet": null,
+        "autobroadened": "false",
+        "title": "Destinations",
+        "type": "GEO",
+        "document_id": "187427",
+        "scope": "global",
+        "name": "Spain, Europe",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10001,
+            "parent_name": "Europe",
+            "parent_id": 4,
+            "rac_enabled": false,
+            "highlighted_name": "Spain",
+            "name": "Spain",
+            "parent_place_type": 10000,
+            "parent_ids": [
+                4,
+                1
+            ],
+            "geo_name": "Europe"
+        },
+        "value": 187427,
+        "coords": "40.4107,-3.727419"
+    },
+    {
+        "lookbackServlet": null,
+        "autobroadened": "false",
+        "title": "Destinations",
+        "type": "GEO",
+        "document_id": "147389",
+        "scope": "global",
+        "name": "Port of Spain, Trinidad and Tobago, Caribbean",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10015,
+            "parent_name": "Trinidad and Tobago",
+            "grandparent_name": "Caribbean",
+            "grandparent_id": 147237,
+            "parent_id": 147387,
+            "grandparent_place_type": 10001,
+            "rac_enabled": false,
+            "highlighted_name": "Port of Spain",
+            "name": "Port of Spain",
+            "parent_place_type": 10011,
+            "parent_ids": [
+                147388,
+                147387,
+                147237,
+                19,
+                1
+            ],
+            "geo_name": "Trinidad and Tobago, Caribbean"
+        },
+        "value": 147389,
+        "coords": "10.659084,-61.51331"
+    },
+    {
+        "lookbackServlet": null,
+        "autobroadened": "false",
+        "title": "Destinations",
+        "type": "GEO",
+        "document_id": "8478016",
+        "scope": "global",
+        "name": "Spain, El Centenillo, Andalucia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10004,
+            "parent_name": "Spain",
+            "grandparent_name": "Europe",
+            "grandparent_id": 4,
+            "parent_id": 187427,
+            "grandparent_place_type": 10000,
+            "rac_enabled": false,
+            "highlighted_name": "Spain, El Centenillo",
+            "name": "Spain, El Centenillo",
+            "parent_place_type": 10001,
+            "parent_ids": [
+                2361623,
+                187428,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Andalucia, Spain"
+        },
+        "value": 8478016,
+        "coords": "38.33772,-3.728785"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "514492",
+        "scope": "global",
+        "name": "Courtyard By Marriott Port Of Spain, Port of Spain, Trinidad and Tobago",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Port of Spain",
+            "address": "Audrey Jeffers Highway",
+            "grandparent_name": "Trinidad and Tobago",
+            "grandparent_id": 147387,
+            "parent_id": 147389,
+            "grandparent_place_type": 10011,
+            "highlighted_name": "Courtyard By Marriott Port Of Spain",
+            "name": "Courtyard By Marriott Port Of Spain",
+            "parent_place_type": 10015,
+            "parent_ids": [
+                147389,
+                147388,
+                147387,
+                147237,
+                19,
+                1
+            ],
+            "geo_name": "Port of Spain, Trinidad and Tobago"
+        },
+        "value": 514492,
+        "coords": "10.659786,-61.53438"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "2664600",
+        "scope": "global",
+        "name": "Navy Lodge Rota Spain, Rota, Andalucia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Rota",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 635886,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Navy Lodge Rota Spain",
+            "name": "Navy Lodge Rota Spain",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                635886,
+                2355755,
+                187428,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Rota, Andalucia, Spain"
+        },
+        "value": 2664600,
+        "coords": "36.632748,-6.346603"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "6023848",
+        "scope": "global",
+        "name": "Finca Natura Spain, Alora, Andalucia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Alora",
+            "address": "Diseminado poligono 8",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 608964,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Finca Natura Spain",
+            "name": "Finca Natura Spain",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                608964,
+                2361615,
+                187428,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Alora, Andalucia, Spain"
+        },
+        "value": 6023848,
+        "coords": "36.847027,-4.652381"
+    }
+]

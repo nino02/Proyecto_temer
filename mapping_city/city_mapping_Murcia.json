@@ -1,0 +1,280 @@
+[
+    {
+        "lookbackServlet": null,
+        "autobroadened": "false",
+        "title": "Destinations",
+        "type": "GEO",
+        "document_id": "187518",
+        "scope": "global",
+        "name": "Murcia, Region of Murcia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10004,
+            "parent_name": "Spain",
+            "grandparent_name": "Europe",
+            "grandparent_id": 4,
+            "parent_id": 187427,
+            "grandparent_place_type": 10000,
+            "rac_enabled": false,
+            "highlighted_name": "Murcia",
+            "name": "Murcia",
+            "parent_place_type": 10001,
+            "parent_ids": [
+                187516,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Region of Murcia, Spain"
+        },
+        "value": 187518,
+        "coords": "37.984093,-1.128515"
+    },
+    {
+        "lookbackServlet": null,
+        "autobroadened": "false",
+        "title": "Destinations",
+        "type": "GEO",
+        "document_id": "187516",
+        "scope": "global",
+        "name": "Region of Murcia, Spain, Europe",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10009,
+            "parent_name": "Spain",
+            "grandparent_name": "Europe",
+            "grandparent_id": 4,
+            "parent_id": 187427,
+            "grandparent_place_type": 10000,
+            "rac_enabled": false,
+            "highlighted_name": "Region of Murcia",
+            "name": "Region of Murcia",
+            "parent_place_type": 10001,
+            "parent_ids": [
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Spain, Europe"
+        },
+        "value": 187516,
+        "coords": "37.9822,-1.12394"
+    },
+    {
+        "lookbackServlet": null,
+        "autobroadened": "false",
+        "title": "Destinations",
+        "type": "GEO",
+        "document_id": "609035",
+        "scope": "global",
+        "name": "Alhama de Murcia, Region of Murcia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10004,
+            "parent_name": "Spain",
+            "grandparent_name": "Europe",
+            "grandparent_id": 4,
+            "parent_id": 187427,
+            "grandparent_place_type": 10000,
+            "rac_enabled": false,
+            "highlighted_name": "Alhama de Murcia",
+            "name": "Alhama de Murcia",
+            "parent_place_type": 10001,
+            "parent_ids": [
+                187516,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Region of Murcia, Spain"
+        },
+        "value": 609035,
+        "coords": "37.8508,-1.42415"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "9763884",
+        "scope": "global",
+        "name": "Hotel Cetina Murcia, Murcia, Region of Murcia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Murcia",
+            "address": "Calle Radio Murcia 3",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 187518,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Hotel Cetina Murcia",
+            "name": "Hotel Cetina Murcia",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                187518,
+                187516,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Murcia, Region of Murcia, Spain"
+        },
+        "value": 9763884,
+        "coords": "37.98512,-1.128512"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "656639",
+        "scope": "global",
+        "name": "Thalasia Costa De Murcia Hotel & Spa, Los Imbernones, Region of Murcia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Los Imbernones",
+            "address": "Avda. Del Puerto, 327-329",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 26634527,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Thalasia Costa De Murcia Hotel &amp; Spa",
+            "name": "Thalasia Costa De Murcia Hotel & Spa",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                26634527,
+                187516,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Los Imbernones, Region of Murcia, Spain"
+        },
+        "value": 656639,
+        "coords": "37.837425,-0.778365"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "228503",
+        "scope": "global",
+        "name": "Barcelo Murcia Siete Coronas, Murcia, Region of Murcia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Murcia",
+            "address": "Paseo Garay, 5",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 187518,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Barcelo Murcia Siete Coronas",
+            "name": "Barcelo Murcia Siete Coronas",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                187518,
+                187516,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Murcia, Region of Murcia, Spain"
+        },
+        "value": 228503,
+        "coords": "37.982098,-1.124232"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "206958",
+        "scope": "global",
+        "name": "Hotel Murcia Rincon de Pepe, Murcia, Region of Murcia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Murcia",
+            "address": "Calle Apostoles 34",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 187518,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Hotel Murcia Rincon de Pepe",
+            "name": "Hotel Murcia Rincon de Pepe",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                187518,
+                187516,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Murcia, Region of Murcia, Spain"
+        },
+        "value": 206958,
+        "coords": "37.98393,-1.126665"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "273115",
+        "scope": "global",
+        "name": "Hesperia Murcia Centro, Murcia, Region of Murcia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Murcia",
+            "address": "Calle Madre de Dios 4",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 187518,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Hesperia Murcia Centro",
+            "name": "Hesperia Murcia Centro",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                187518,
+                187516,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Murcia, Region of Murcia, Spain"
+        },
+        "value": 273115,
+        "coords": "37.984318,-1.131214"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "206957",
+        "scope": "global",
+        "name": "Hotel Sercotel Amistad Murcia, Murcia, Region of Murcia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Murcia",
+            "address": "Calle Condestable 1",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 187518,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Hotel Sercotel Amistad Murcia",
+            "name": "Hotel Sercotel Amistad Murcia",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                187518,
+                187516,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Murcia, Region of Murcia, Spain"
+        },
+        "value": 206957,
+        "coords": "37.988934,-1.135063"
+    }
+]

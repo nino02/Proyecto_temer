@@ -70,13 +70,13 @@ document.addEventListener("DOMContentLoaded", () => {
     searchButton.addEventListener("click", (event) => {
         event.preventDefault();
 
-        const cityid = destinationInput.value.trim(); // ID o nombre de la ciudad
+        const cityName = cleanCityName(destinationInput.value.trim()); // nombre de la ciudad
         const checkin = checkinInput.value;
         const checkout = checkoutInput.value;
         const adults = adultsInput.value;
 
         // Validar los campos antes de enviar
-        if (!cityid || !checkin || !checkout || !adults) {
+        if (!cityName || !checkin || !checkout || !adults) {
             alert("Por favor, rellena todos los campos.");
             return; 
         }
@@ -85,14 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
         
-
+        
         // Realizar solicitud POST al servidor
         fetch('/api/data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ cityid, checkin, checkout, adults }),
+            
+            body: JSON.stringify({ cityName, checkin, checkout, adults }),
             })
             .then(response => {
                 if (!response.ok) {
@@ -232,6 +233,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
     }
+
+    function cleanCityName(cityName) {
+        return cityName
+            .split("/")[0] // Quedarse con la parte anterior a la barra
+            .normalize("NFD") // Descompone caracteres con tildes
+            .replace(/[\u0300-\u036f]/g, "") // Elimina las marcas de acento
+            .replace(/ñ/g, "n") // Reemplaza ñ por n
+            .replace(/[^a-zA-Z0-9\s]/g, "") // Elimina caracteres especiales como /, etc.
+            .trim(); // Elimina espacios adicionales
+    }
+    
 });
 
 

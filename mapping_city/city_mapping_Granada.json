@@ -1,0 +1,257 @@
+[
+    {
+        "lookbackServlet": null,
+        "autobroadened": "false",
+        "title": "Destinations",
+        "type": "GEO",
+        "document_id": "187428",
+        "scope": "global",
+        "name": "Andalucia, Spain, Europe",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10009,
+            "parent_name": "Spain",
+            "grandparent_name": "Europe",
+            "grandparent_id": 4,
+            "parent_id": 187427,
+            "grandparent_place_type": 10000,
+            "rac_enabled": false,
+            "highlighted_name": "Andalucia",
+            "name": "Andalucia",
+            "parent_place_type": 10001,
+            "parent_ids": [
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Spain, Europe"
+        },
+        "value": 187428,
+        "coords": "37.446087,-4.647166"
+    },
+    {
+        "lookbackServlet": null,
+        "autobroadened": "false",
+        "title": "Destinations",
+        "type": "GEO",
+        "document_id": "6940262",
+        "scope": "global",
+        "name": "Nueva Andalucia, Costa del Sol, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10004,
+            "parent_name": "Spain",
+            "grandparent_name": "Europe",
+            "grandparent_id": 4,
+            "parent_id": 187427,
+            "grandparent_place_type": 10000,
+            "rac_enabled": false,
+            "highlighted_name": "Nueva Andalucia",
+            "name": "Nueva Andalucia",
+            "parent_place_type": 10001,
+            "parent_ids": [
+                187439,
+                187435,
+                2361615,
+                187428,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Costa del Sol, Spain"
+        },
+        "value": 6940262,
+        "coords": "36.492527,-4.958694"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "517966",
+        "scope": "global",
+        "name": "Andalucia Guest House, San Juan, Puerto Rico",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "San Juan",
+            "address": "2011 Calle McLeary",
+            "grandparent_name": "Puerto Rico",
+            "grandparent_id": 147319,
+            "parent_id": 147320,
+            "grandparent_place_type": 10010,
+            "highlighted_name": "Andalucia Guest House",
+            "name": "Andalucia Guest House",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                147320,
+                147319,
+                147237,
+                19,
+                1
+            ],
+            "geo_name": "San Juan, Puerto Rico"
+        },
+        "value": 517966,
+        "coords": "18.452208,-66.05361"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "282168",
+        "scope": "global",
+        "name": "Iberostar Selection Andalucia Playa, Novo Sancti Petri, Costa de la Luz, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Novo Sancti Petri",
+            "address": "Calle Amilcar Barca",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 658916,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Iberostar Selection Andalucia Playa",
+            "name": "Iberostar Selection Andalucia Playa",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                658916,
+                187433,
+                187431,
+                187428,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Novo Sancti Petri, Costa de la Luz, Spain"
+        },
+        "value": 282168,
+        "coords": "36.347614,-6.165817"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "20982052",
+        "scope": "global",
+        "name": "Hotel Silken El Pilar Andalucia, Estepona, Costa del Sol, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Estepona",
+            "address": "Plaza de las Flores No 12",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 187437,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Hotel Silken El Pilar Andalucia",
+            "name": "Hotel Silken El Pilar Andalucia",
+            "parent_place_type": 10015,
+            "parent_ids": [
+                187437,
+                187435,
+                2361615,
+                187428,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Estepona, Costa del Sol, Spain"
+        },
+        "value": 20982052,
+        "coords": "36.425472,-5.145467"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "1741598",
+        "scope": "global",
+        "name": "Golden Tulip Andalucia Golf Tangier, Tangier, Morocco",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Tangier",
+            "address": "Route de Cap Spartel",
+            "grandparent_name": "Morocco",
+            "grandparent_id": 293730,
+            "parent_id": 293737,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Golden Tulip Andalucia Golf Tangier",
+            "name": "Golden Tulip Andalucia Golf Tangier",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                293737,
+                2626788,
+                293730,
+                6,
+                1
+            ],
+            "geo_name": "Tangier, Morocco"
+        },
+        "value": 1741598,
+        "coords": "35.777912,-5.847417"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "295471",
+        "scope": "global",
+        "name": "Andalucia Center Hotel, Granada, Andalucia, Spain",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Granada",
+            "address": "Avenida America, 3",
+            "grandparent_name": "Spain",
+            "grandparent_id": 187427,
+            "parent_id": 187441,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Andalucia Center Hotel",
+            "name": "Andalucia Center Hotel",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                187441,
+                1044828,
+                187428,
+                187427,
+                4,
+                1
+            ],
+            "geo_name": "Granada, Andalucia, Spain"
+        },
+        "value": 295471,
+        "coords": "37.161457,-3.60005"
+    },
+    {
+        "autobroadened": "false",
+        "type": "HOTEL",
+        "title": "Hotels",
+        "document_id": "1014044",
+        "scope": "global",
+        "name": "Andalucia Beach Hotel - All Inclusive, Elenite, Bulgaria",
+        "data_type": "LOCATION",
+        "details": {
+            "placetype": 10023,
+            "parent_name": "Elenite",
+            "address": "Royal Club",
+            "grandparent_name": "Bulgaria",
+            "grandparent_id": 294451,
+            "parent_id": 635767,
+            "grandparent_place_type": 10001,
+            "highlighted_name": "Andalucia Beach Hotel - All Inclusive",
+            "name": "Andalucia Beach Hotel - All Inclusive",
+            "parent_place_type": 10004,
+            "parent_ids": [
+                635767,
+                616049,
+                294451,
+                4,
+                1
+            ],
+            "geo_name": "Elenite, Bulgaria"
+        },
+        "value": 1014044,
+        "coords": "42.702354,27.810753"
+    }
+]
