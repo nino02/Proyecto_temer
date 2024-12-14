@@ -25,8 +25,6 @@ Este proyecto es un portal de reservas de hoteles enfocado en fomentar el consum
 
 ## Estructura del Proyecto
 
-root/ │── public/ │ ├── css/ │ ├── js/ │ ├── img/ │ ├── secciones/ │── mapping_city/ │── server.js │── package.json │── README.md
-
 - **`public/`:** Contiene los recursos de frontend, incluyendo las hojas de estilo, imágenes y scripts.
 - **`server.js`:** Archivo principal del servidor Node.js.
 - **`package.json`:** Lista de dependencias y configuración del proyecto.
@@ -41,9 +39,12 @@ root/ │── public/ │ ├── css/ │ ├── js/ │ ├── img/ 
     node server.js
    ```
 Capturas de Pantalla
-Página principal
 
+
+Página principal
+![image](https://github.com/user-attachments/assets/f01b9290-8156-4efa-a6fb-f23772d75039)
 Resultados de búsqueda
+![image](https://github.com/user-attachments/assets/e1810bee-ef9c-486b-a925-ac5ff3be0c8b)
 
 Contribuciones
 Este proyecto fue desarrollado por:
