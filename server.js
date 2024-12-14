@@ -21,7 +21,6 @@ const filterHotels = (hotels) => {
 // Ruta principal
 app.post('/api/data', async (req, res) => {
     const { cityName, checkin, checkout, adults } = req.body;
-    console.log(req.body);
     try {
         // Primera consulta: Obtener el ID de la ciudad
         const cityMappingUrl = 'https://api.makcorps.com/mapping';
@@ -37,7 +36,6 @@ app.post('/api/data', async (req, res) => {
         }
         // Obtener el primer ID de la ciudad
         const cityId = cityMappingResponse.data[0].document_id;
-        console.log(cityId);
         // Segunda consulta: Buscar hoteles utilizando el ID de la ciudad
         const hotelSearchUrl = 'https://api.makcorps.com/city';
         const hotelSearchResponse = await axios.get(hotelSearchUrl, {
