@@ -1,6 +1,15 @@
 const express = require('express');
 const axios = require('axios');
+const nodemailer = require("nodemailer");
+
 const app = express();
+// Configuración del servidor SMTP (sin autenticación)
+const transporter = nodemailer.createTransport({
+  host: "smtp.upv.es", // Servidor SMTP
+  port: 25, // Puerto no seguro
+  secure: false, // Conexión sin cifrado
+});
+
 
 app.use(express.json());
 
@@ -17,6 +26,32 @@ const filterHotels = (hotels) => {
             price: hotel.price1
         }));
 };
+
+// Endpoint para enviar correos
+app.post("/send-email", async (req, res) => {
+  const { to, subject, text } = req.body;
+
+  // Validar parámetros
+  if (!to || !subject || !text) {
+      return res.status(400).send("Faltan parámetros obligatorios: 'to', 'subject', 'text'");
+  }
+
+  const mailOptions = {
+      from: "hotelify-no-reply@teleco.upv.es", // Dirección del remitente
+      to, // Dirección del destinatario
+      subject, // Asunto del correo
+      text, // Contenido del mensaje
+  };
+
+  try {
+      // Enviar el correo
+      await transporter.sendMail(mailOptions);
+      res.status(200).send(`Correo enviado con éxito a ${to}`);
+  } catch (error) {
+      console.error("Error al enviar correo:", error);
+      res.status(500).send("Error al enviar el correo.");
+  }
+});
 
 // Ruta principal
 app.post('/api/data', async (req, res) => {
