@@ -4,20 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotelify</title>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-
-
-     /* EMAIL JS */
-    </script>
-    <script type="text/javascript">
-    (function(){
-        emailjs.init({
-            publicKey: "WMzC2_geQ9qN42WjI",
-        });
-    })();
-    </script>
-
     <script src="../js/email.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/contacto.css">
@@ -55,10 +41,10 @@
   
           <div class="opciones_contacto">
             <input type="text" id="name" placeholder="Nombre" />
-            <input type="email"id="email"  name="" id="" placeholder="Correo Electrónico" />
+            <input type="text"id="email"  name="" placeholder="Correo Electrónico" />
             <input type="text" id="subject" placeholder="Asunto" />
             <textarea name="message" id="message" cols="30" rows="10"></textarea>
-            <button type="submit" class="boton_medio">Enviar</button>
+            <button type="submit" class="boton_medio" id="button-reservation">Enviar</button>
             <div id="status-message" class="hidden"></div>
           </div>
         </form>
@@ -162,6 +148,15 @@
     </footer>
     
       <script type="text/javascript" src="../js/cabecera.js"></script>
-
+      <script>
+        
+        console.log(email,name,subject);
+        document.getElementById("button-reservation").addEventListener("click", function () {
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+            sendMail(email,subject,name);
+        });
+    </script>
 </body>
 </html>

@@ -1,28 +1,31 @@
-function sendMail() {
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let subject = document.getElementById("subject").value.trim();
-    let message = document.getElementById("message").value.trim();
-
-    let statusMessage = document.getElementById("status-message");
-    statusMessage.classList.remove("success", "error", "hidden");
-
-    if (!name || !email || !subject || !message) {
-        statusMessage.textContent = "Por favor, completa todos los campos.";
-        statusMessage.classList.add("error");
-        return;
-    }
-
-    let parms = { name, email, subject, message };
-
-    emailjs.send("service_8j773kk", "template_5gkjxwn", parms)
-        .then(function(response) {
-            statusMessage.textContent = "Correo enviado exitosamente. ¡Gracias por contactarnos!";
-            statusMessage.classList.add("success");
+function sendMail(mail, subject, text) {
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            to: mail, // Dirección del destinatario
+            subject: subject, // Asunto del correo
+            text: text, // Contenido del mensaje
+        }),
+    })
+        .then((response) => {
+            
+            if (!response.ok) {
+                throw new Error("Error al enviar el correo");
+            }
+            return response.text();
         })
-        .catch(function(error) {
-            statusMessage.textContent = "Hubo un error al enviar el correo. Intenta nuevamente.";
-            statusMessage.classList.add("error");
-            console.error("Error al enviar:", error);
+        .then((data) => {
+            alert("Correo enviado con éxito.");
+            console.log("Respuesta del servidor:", data);
+        })
+        .catch((error) => {
+            alert("Hubo un problema al enviar el correo.");
+            console.error("Error:", error);
+        })
+        .finally(() => {
+            // Ocultar el mensaje de carga
         });
 }
