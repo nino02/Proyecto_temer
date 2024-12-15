@@ -1,16 +1,16 @@
 
 // Array con las imágenes y sus títulos
 const fotos = [
-    { src: "../img/ciudades/madrid.jpg", titulo: "Madrid" },
-    { src: "../img/ciudades/albacete.jpg", titulo: "Albacete" },
-    { src: "../img/ciudades/alicante.jpg", titulo: "Alicante" },
-    { src: "../img/ciudades/barcelona.jpg", titulo: "Barcelona" },
-    { src: "../img/ciudades/bilbao.jpg", titulo: "Bilbao" },
-    { src: "../img/ciudades/mallorca.jpg", titulo: "Mallorca" },
-    { src: "../img/ciudades/salamanca.jpg", titulo: "Salamanca" },
-    { src: "../img/ciudades/sevilla.jpg", titulo: "Sevilla" },
-    { src: "../img/ciudades/valencia.jpg", titulo: "Valencia" },
-    { src: "../img/ciudades/zaragoza.jpg", titulo: "Zaragoza" },
+    { src: "./img/ciudades/madrid.jpg", titulo: "Madrid" },
+    { src: "./img/ciudades/albacete.jpg", titulo: "Albacete" },
+    { src: "./img/ciudades/alicante.jpg", titulo: "Alicante" },
+    { src: "./img/ciudades/barcelona.jpg", titulo: "Barcelona" },
+    { src: "./img/ciudades/bilbao.jpg", titulo: "Bilbao" },
+    { src: "./img/ciudades/mallorca.jpg", titulo: "Mallorca" },
+    { src: "./img/ciudades/salamanca.jpg", titulo: "Salamanca" },
+    { src: "./img/ciudades/sevilla.jpg", titulo: "Sevilla" },
+    { src: "./img/ciudades/valencia.jpg", titulo: "Valencia" },
+    { src: "./img/ciudades/zaragoza.jpg", titulo: "Zaragoza" },
 ];
 
 // Elemento del carrusel

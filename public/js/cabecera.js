@@ -9,3 +9,18 @@ window.addEventListener("scroll", () => {
         header.classList.remove("sticky");
     }
 });
+
+// Aplicamos un fondo blanco fijo en las páginas de contacto, privacidad y sobre nosotros
+if (
+    window.location.pathname.includes("contacto.html") ||
+    window.location.pathname.includes("privacidad.html") ||
+    window.location.pathname.includes("sobrenosotros.html") || 
+    window.location.pathname.includes("sobrenosotrosfix.html")
+) {
+    header.style.backgroundColor = "var(--white)";
+    header.style.position = "fixed";
+    header.style.width = "100%";
+    header.style.top = "0";
+    header.style.left = "0";
+    header.style.zIndex = "1000";
+}

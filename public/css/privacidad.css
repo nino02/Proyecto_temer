@@ -1,0 +1,65 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Sección principal */
+main {
+    padding: 50px 10%;
+}
+
+section {
+    padding-top: 1000px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: var(--primary-dark);
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-light);
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Variables de colores */
+:root {
+    --primary-light: #74a84a;
+    --primary-dark: #2c541d;
+    --white: #efefef;
+    --black: #000000;
+}
+

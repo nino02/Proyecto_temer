@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotelify</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+
+
+     /* EMAIL JS */
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "WMzC2_geQ9qN42WjI",
+        });
+    })();
+    </script>
+
+    <script src="./js/email.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/contacto.css">
+    <link rel="stylesheet" type="text/css" href="css/nav_footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section id="zona_contacto">
+      <div class="contenedor_principal">
+        <!---- Zona nav arriba derecha -->
+            <!-- Header -->
+      <header>
+        <a href="#" class="logo">Hotelify</a>
+        <ul class="navbar">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./Busqueda.html">Búsqueda</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="./sobrenosotrosfix.html">Sobre Nosotros</a></li>
+        </ul>
+      </header>
+
+
+            <!---- Zona texto medio -->
+            <div class="zona_texto_medio">
+                <h1>Contáctanos</h1>
+            </div>
+        </div>
+    </section>
+            <!---- Zona contacto -->
+    <section id="zona_contacto_dentro" class="contenedor_principal">
+        <form action="#" id="contact-form">
+          <h1>Contacta con nosotros</h1>
+  
+          <div class="opciones_contacto">
+            <input type="text" id="name" placeholder="Nombre" />
+            <input type="email"id="email"  name="" id="" placeholder="Correo Electrónico" />
+            <input type="text" id="subject" placeholder="Asunto" />
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <button type="submit" class="boton_medio">Enviar</button>
+            <div id="status-message" class="hidden"></div>
+          </div>
+        </form>
+        <!---- Zona de nuestra información -->
+        <div class="texto_datos">
+          <h1>Nuestra información</h1>
+  
+
+          <div class="info_nuestra">
+
+            <div class="info">
+              <img src="./img/email.png" alt="" />
+              <div class="text">
+                  <h6>Correos de Contacto</h6>
+                  <ul>
+                      <li><a href="mailto:khabenba@teleco.upv.es">Khalil Bendahmane Baskach</a></li>
+                      <li><a href="mailto:jmolale@teleco.upv.es">Jaime Molina Alegre</a></li>
+                      <li><a href="mailto:anavalm@teleco.upv.es">Antonio Navarro Almodóvar</a></li>
+                      <li><a href="mailto:jgalhar@teleco.upv.es">Jesús Galiano Haro</a></li>
+                  </ul>
+              </div>
+          </div>
+
+
+
+            <div class="info">
+              <img src="./img/phone.png" alt="" />
+              <div class="text">
+                <h6>Numero de teléfono</h6>
+                <p>+34 963877190</p>
+              </div>
+            </div>
+            <div class="info">
+              <img src="./img/location.png" alt="" />
+              <div class="text">
+                <h6>Dirección</h6>
+                <p>
+                  Valencia, C/ <br />
+                  Camí de Vera, s/n, Algirós, 46022 <br>
+                  <a href="https://maps.app.goo.gl/XktoZnQ1AToVkm4F9"><b>Escuela Técnica Superior de Ingeniería de Telecomunicación</b></a>
+                </p>
+              </div>
+            </div>
+          </div>
+           <!---- Zona redes -->
+          <div class="zona_redes">
+            <h3>Siguenos en nuestras redes :</h3>
+            <ul class="redes_sociales">
+              <li>
+                <a href="https://www.facebook.com/TelecoUPV/?locale=es_ES"> <img src="../img/facebook.png" alt="" /> </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/telecomvlc/posts/?feedView=all"> <img src="../img/linkedin.png" alt="" /> </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/TelecoUPV"> <img src="../img/video.png" alt="" /> </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      
+
+
+
+      </section>
+
+
+      <!---- ZONA FOOTER -->
+      <footer>
+        <h1>¡Únete a miles de huéspedes satisfechos que disfrutan de una experiencia única!</h1>
+        <p>Relájate, disfruta y haz de tu estancia un recuerdo inolvidable en nuestro hotel.</p>
+        
+        <div class="social-media">
+            </a>
+            <a href="https://www.linkedin.com/company/telecomvlc/posts/?feedView=all" target="_blank">
+                <img src="img/linkedin.png" alt="Linkedin">
+            </a>
+            </a>
+            <a href="https://www.facebook.com/TelecoUPV/?locale=es_ES" target="_blank">
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com/user/TelecoUPV" target="_blank">
+                <img src="img/video.png" alt="YouTube">
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="./privacidad.html">Política de privacidad</a>
+            <a href="./privacidad.html">Términos y condiciones</a>
+            <a href="./contacto.html">Contacto</a>
+      </div>
+    
+        <div class="bottom-info">
+            <div class="address">
+                <a href="https://maps.app.goo.gl/XktoZnQ1AToVkm4F9">Escuela Técnica Superior de Ingeniería de Telecomunicación</a>
+            </div>
+    
+            <div class="contact">
+              <p>Para cualquier consulta, por favor visita nuestra <a href="/contacto.html">página de contacto</a>.</p>
+          </div>
+        </div>
+    </footer>
+    
+      <script type="text/javascript" src="../js/cabecera.js"></script>
+
+</body>
+</html>
