@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoteles_UPV</title>
+    <link rel="stylesheet" href="../css/busqueda.css">
+    <link rel="stylesheet" type="text/css" href="../css/nav_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+            <!-- Header -->
+            <header>
+                <a href="#" class="logo">Hotelify</a>
+                <ul class="navbar">
+                  <li><a href="../index.html">Inicio</a></li>
+                  <li><a href="./Busqueda.html">Búsqueda</a></li>
+                  <li><a href="./contacto.html">Contacto</a></li>
+                  <li><a href="./sobrenosotrosfix.html">Sobre Nosotros</a></li>
+                </ul>
+              </header>
+<!-- Lista de hoteles -->
+<div class="search-container">
+    <!-- Primera fila: Campo de destino -->
+    <div class="search-row">
+        <div class="search-field full-width">
+            <label for="destination">Destino</label>
+            <input type="text" id="destination" placeholder="Introduce tu destino" autocomplete="off">
+            <ul id="suggestions" class="suggestions-list"></ul>
+        </div>
+    </div>
+
+    <!-- Segunda fila: Check-in, Check-out, Adultos y Buscar -->
+    <div class="search-row">
+        <div class="search-field">
+            <label for="checkin">Check-in</label>
+            <input type="date" id="checkin">
+        </div>
+        <div class="search-field">
+            <label for="checkout">Check-out</label>
+            <input type="date" id="checkout">
+        </div>
+        <div class="search-field">
+            <label for="adults">Adultos</label>
+            <select id="adults">
+                <option value="1">1 adulto</option>
+                <option value="2">2 adultos</option>
+                <option value="3">3 adultos</option>
+                <option value="4">4 adultos</option>
+            </select>
+        </div>
+        <button class="search-button">Buscar</button>
+    </div>
+</div>
+
+<div class="filter-buttons">
+    <button id="filter-price" class="filter-button">
+        <i class="fa fa-tag" aria-hidden="true"></i> <!-- Icono para precio -->
+    </button>
+    <button id="filter-alphabetical" class="filter-button">
+        <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> <!-- Icono para orden alfabético -->
+    </button>
+    <button id="filter-rating" class="filter-button">
+        <i class="fa fa-star" aria-hidden="true"></i> <!-- Icono para rating -->
+    </button>
+</div>
+<div id="loading-container" class="loading">
+    <img src="../img/carga_api.gif" alt="Cargando..." class="loading-gif">
+    <p>Cargando resultados...</p>
+</div>
+
+<main id="hotel-list">
+    <div class="hotel-card">
+        <img src="../img/hoteles/hotel5.jpg" alt="Imagen del Hotel 5 estrellas" class="hotel-image">
+        <div class="hotel-info">
+            <h2 class="hotel-name">Hotel Premium</h2>
+            <p class="hotel-price">Precio: 300€ por noche</p>
+            <p class="hotel-rating">Valoración: ★★★★★</p>
+        </div>
+    </div>
+    
+    <div class="hotel-card">
+        <img src="../img/hoteles/hotel4.jpg" alt="Imagen del Hotel 4 estrellas" class="hotel-image">
+        <div class="hotel-info">
+            <h2 class="hotel-name">Hotel Lujo</h2>
+            <p class="hotel-price">Precio: 200€ por noche</p>
+            <p class="hotel-rating">Valoración: ★★★★☆</p>
+        </div>
+    </div>
+    
+    <div class="hotel-card">
+        <img src="../img/hoteles/hotel3.jpg" alt="Imagen del Hotel 3 estrellas" class="hotel-image">
+        <div class="hotel-info">
+            <h2 class="hotel-name">Hotel Familiar</h2>
+            <p class="hotel-price">Precio: 120€ por noche</p>
+            <p class="hotel-rating">Valoración: ★★★☆☆</p>
+        </div>
+    </div>
+    
+    <div class="hotel-card">
+        <img src="../img/hoteles/hotel2.jpg" alt="Imagen del Hotel 2 estrellas" class="hotel-image">
+        <div class="hotel-info">
+            <h2 class="hotel-name">Hotel Confort</h2>
+            <p class="hotel-price">Precio: 100€ por noche</p>
+            <p class="hotel-rating">Valoración: ★★☆☆☆</p>
+        </div>
+    </div>
+    
+    <div class="hotel-card">
+        <img src="../img/hoteles/hotel1.jpg" alt="Imagen del Hotel 1 estrella" class="hotel-image">
+        <div class="hotel-info">
+            <h2 class="hotel-name">Hotel Económico</h2>
+            <p class="hotel-price">Precio: 80€ por noche</p>
+            <p class="hotel-rating">Valoración: ★☆☆☆☆</p>
+        </div>
+    </div>
+    
+    <div class="hotel-card">
+        <img src="../img/hoteles/hotel0.jpg" alt="Imagen del Hotel 0 estrellas" class="hotel-image">
+        <div class="hotel-info">
+            <h2 class="hotel-name">Hotel Básico</h2>
+            <p class="hotel-price">Precio: 50€ por noche</p>
+            <p class="hotel-rating">Valoración: ☆☆☆☆☆</p>
+        </div>
+    </div>
+    
+    
+    <!-- Añade más hoteles -->
+</main>
+                      <!---- ZONA FOOTER -->
+      <footer>
+        <h1>¡Únete a miles de huéspedes satisfechos que disfrutan de una experiencia única!</h1>
+        <p>Relájate, disfruta y haz de tu estancia un recuerdo inolvidable en nuestro hotel.</p>
+        
+        <div class="social-media">
+            </a>
+            <a href="https://www.linkedin.com/company/telecomvlc/posts/?feedView=all" target="_blank">
+                <img src="../img/linkedin.png" alt="Linkedin">
+            </a>
+            </a>
+            <a href="https://www.facebook.com/TelecoUPV/?locale=es_ES" target="_blank">
+                <img src="../img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com/user/TelecoUPV" target="_blank">
+                <img src="../img/video.png" alt="YouTube">
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="./privacidad.html">Política de privacidad</a>
+            <a href="./privacidad.html">Términos y condiciones</a>
+            <a href="./contacto.html">Contacto</a>
+      </div>
+    
+        <div class="bottom-info">
+            <div class="address">
+                <a href="https://maps.app.goo.gl/XktoZnQ1AToVkm4F9">Escuela Técnica Superior de Ingeniería de Telecomunicación</a>
+            </div>
+    
+            <div class="contact">
+              <p>Para cualquier consulta, por favor visita nuestra <a href="/contacto.html">página de contacto</a>.</p>
+          </div>
+        </div>
+    </footer>
+                  <script type="text/javascript" src="../js/cabecera.js"></script>
+
+    <script src="../js/busqueda.js"></script>
+
+</body>
+</html>
