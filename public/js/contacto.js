@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
       const subject = document.getElementById("subject").value;
-      const message = 'Prueba de correo';
+      const message = document.getElementById("message").value + "\n Se ha realizado la reserva";
       sendMail(email,subject,message);
     });
     function getQueryParams() {
@@ -23,6 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
 Hotel: ${hotel}
 ${precio}
                   
-Por favor, completa el formulario y contacta con nosotros para reservar.`;
+`;
 }       
 });
