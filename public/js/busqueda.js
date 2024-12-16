@@ -148,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
      
-    // Escuchar el evento "input" en el campo de destino
     destinationInput.addEventListener("input", () => {
         const query = destinationInput.value.trim();
         showSuggestions(query);
@@ -178,7 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const checkoutDate = new Date(checkoutInput.value);
         const today = new Date();
 
-        // Eliminar horas, minutos y segundos de la fecha actual
         today.setHours(0, 0, 0, 0);
 
         if (checkinDate < today) {

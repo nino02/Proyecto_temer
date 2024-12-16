@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => { 
     document.getElementById("button-reservation").addEventListener("click", function () {
       const name = document.getElementById("name").value;
@@ -6,6 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const message = 'Prueba de correo';
       sendMail(email,subject,message);
     });
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+          hotel: params.get("hotel"),
+          precio: params.get("precio"),
+      };
+  }
     const { hotel, precio } = getQueryParams();
     const reservationDetails = document.getElementById("message");
   
