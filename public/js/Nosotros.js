@@ -16,9 +16,9 @@ const fotos = [
 // Elemento del carrusel
 const carrusel = document.querySelector(".carrusel");
 
-// Inicializar la serie de fotos visibles
+
 let inicio = 0;
-const cantidadVisible = 5; // Cantidad de fotos visibles
+const cantidadVisible = 5; 
 
 // Crear los elementos iniciales en el carrusel
 function inicializarCarrusel() {
@@ -53,21 +53,21 @@ function crearItem(foto) {
 
 // Función para desplazar las fotos
 function desplazarFotos() {
-    // Quitar la primera foto (izquierda)
+    
     carrusel.removeChild(carrusel.firstElementChild);
 
-    // Calcular la siguiente foto y añadirla al final (derecha)
+    
     const siguienteIndex = (inicio + cantidadVisible) % fotos.length;
     const nuevaFoto = crearItem(fotos[siguienteIndex]);
     carrusel.appendChild(nuevaFoto);
 
-    // Actualizar el índice inicial
+    
     inicio = (inicio + 1) % fotos.length;
 }
 
-// Inicializar el carrusel
+
 inicializarCarrusel();
 
-// Configurar el desplazamiento automático cada segundo
+// Configurar el desplazamiento automático cada 3 segundo
 setInterval(desplazarFotos, 3000);
 
