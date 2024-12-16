@@ -166,6 +166,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Verificar si el clic viene de un botón "Reservar"
         if (event.target.classList.contains("reserve-button")) {
             const hotelName = event.target.parentElement.querySelector(".hotel-name").textContent;
+            const price = event.target.parentElement.querySelector(".hotel-price").textContent;
+            const url = `./contacto.html?hotel=${encodeURIComponent(hotelName)}&precio=${encodeURIComponent(price)}`;
+            window.location.href = url;
             alert(`Has reservado el hotel: ${hotelName}`);
         }
     });

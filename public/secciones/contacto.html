@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotelify</title>
     <script src="../js/email.js"></script>
-
+    <script src="../js/contacto.js"></script>
+     
     <link rel="stylesheet" type="text/css" href="../css/contacto.css">
     <link rel="stylesheet" type="text/css" href="../css/nav_footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -148,15 +149,5 @@
     </footer>
     
       <script type="text/javascript" src="../js/cabecera.js"></script>
-      <script>
-        
-        console.log(email,name,subject);
-        document.getElementById("button-reservation").addEventListener("click", function () {
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const subject = document.getElementById("subject").value;
-            sendMail(email,subject,name);
-        });
-    </script>
 </body>
 </html>

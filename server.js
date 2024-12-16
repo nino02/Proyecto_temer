@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 
 app.use(express.json());
 
-const API_KEY = '675d95db5abc14d98a448961'; // API Key de Makcorps
+const API_KEY = '675fe5ad84a595d9549af30f'; // API Key de Makcorps
 
 // Función para filtrar datos relevantes
 const filterHotels = (hotels) => {
